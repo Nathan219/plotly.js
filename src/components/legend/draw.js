@@ -36,6 +36,7 @@ var DBLCLICKDELAY = interactConstants.DBLCLICKDELAY;
 
 module.exports = function draw(gd) {
     var fullLayout = gd._fullLayout;
+    var legendLayout = gd.layout.legend || {};
     var clipId = 'legend' + fullLayout._uid;
 
     if(!fullLayout._infolayer || !gd.calcdata) return;
@@ -185,8 +186,8 @@ module.exports = function draw(gd) {
             // Make sure the legend top and bottom are visible
             // (legends with a scroll bar are not allowed to stretch beyond the extended
             // margins)
-            var legendHeight = opts._height,
-                legendHeightMax = gs.h;
+            var legendHeight = (legendLayout.maxHeight) ? Math.min(opts._height, legendLayout.maxHeight) : opts._height;
+            var legendHeightMax = gs.h;
 
             if(legendHeight > legendHeightMax) {
                 ly = gs.t;
