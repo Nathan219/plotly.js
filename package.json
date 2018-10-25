@@ -1,5 +1,5 @@
 {
-  "name": "plotly.js",
+  "name": "plotly-with-max-legend-height",
   "version": "1.41.3",
   "description": "The open source javascript graphing library that powers plotly",
   "license": "MIT",
@@ -7,10 +7,10 @@
   "webpack": "./dist/plotly.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plotly/plotly.js.git"
+    "url": "https://github.com/Nathan219/plotly.js.git"
   },
   "bugs": {
-    "url": "https://github.com/plotly/plotly.js/issues"
+    "url": "https://github.com/Nathan219/plotly.js/issues"
   },
   "author": "Plotly, Inc.",
   "keywords": [
@@ -159,5 +159,10 @@
     "true-case-path": "^1.0.2",
     "watchify": "^3.11.0",
     "xml2js": "^0.4.16"
+  },
+  "homepage": "https://github.com/Nathan219/plotly.js#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
